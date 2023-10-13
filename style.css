@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,400;1,500;1,700;1,900&family=Young+Serif&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(https://images.wallpapersden.com/image/download/abstract-rey-of-colors-4k_bGxuZ2eUmZqaraWkpJRobWllrWdma2U.jpg);
+}
+
+.icon-image {
+    height: 70px;
+    width: 70px;
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 5px;
+    box-shadow: 0 5px 10px rgba(216, 208, 208, 0.25);
+    cursor: pointer;
+    
+    
+    
+}
+
+.icon-image:hover .hover-image{
+    left: -200px;
+    z-index: 12;
+    transform: translateX(80px);
+    transition: left 0.5s, z-index 0s, transform 0.5s;
+    transition-delay: 0s ,0.5s ,0.5s;
+
+}
+
+.container {
+    height: 500px;
+    min-width: 400px;
+    display: flex;
+    align-items: flex-end;
+    margin-top: -55px;
+}
+
+.icon-image img {
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #0396FF;
+}
+
+.icon-image::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+  }
+
+.hover-image{
+    position: absolute;
+    height: 350px;
+    width: 300px;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    z-index: 0;
+    transition: transform 0.5s, z-index 0s, left 0.5s;
+    transition-delay: 0s, 0.5s, 0.5s;
+    pointer-events: none;
+}
+
+.hover-image img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 25px;
+    
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+    left: 0;
+    padding: 0 10px;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: rotate(45deg);
+    bottom: -1px;
+    z-index: -1;
+}
+
+.content .details {
+    position: relative;
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.icon-image:hover .details{
+    opacity: 1;
+    transform: translateY(4px);
+    transition: all 0.3s ease;
+    transition-delay: 0.6s;
+    pointer-events: auto;
+}
+
+
+.content .details::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    bottom: -10px;
+    z-index: -1;
+    
+}
+
+.details .name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.details .job {
+    font-size: 17px;
+    color: #0396FF;
+    margin: -3px 0 5px 0;
+}
+
+.last-image .hover-image {
+   transition: none;
+}
+
+.last-image:hover .hover-image {
+    transition: none;
+ }
+
+.last-image:hover .details{
+    transition-delay: 0s;
+}
